@@ -5,16 +5,17 @@ import ru.netology.entity.Country;
 import ru.netology.entity.Location;
 import ru.netology.geo.GeoService;
 import ru.netology.geo.GeoServiceImpl;
-
+import java.util.Date;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class GeoServiceImplTest {
     GeoServiceImpl geoService = Mockito.mock(GeoServiceImpl.class);
     private final GeoService suite = new GeoServiceImpl();
+    Date data = new Date();
 
     @BeforeEach
     public void initTest() {
-        System.out.println("Starting new test");
+        System.out.println("Starting new test " + data.toString());
     }
 
     @AfterEach
